@@ -57,5 +57,5 @@ melted = melt(bindData, id = id, measure.vars = measure_vars)
 ##use dcast function to apply mean into the finalData
 finalData = dcast(melted, Volunteer + Activity ~ variable, mean)
 
-##write into a csv file
-write.csv(finalData, file = "./data/UCI HAR Dataset/UCIHARDataset.csv")
+##write into a TXT file
+write.table(finalData, file = "./data/UCI HAR Dataset/UCIHARDataset.txt", row.name = FALSE)
